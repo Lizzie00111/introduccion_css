@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #f0f8ff; /* Light blue background */
     color: #333; /* Text color */
-    
 }
 
 /* Header */
@@ -149,21 +148,58 @@ p{
 
 
 /*Acerca */
+
 #acerca {
     padding: 20px;
-    color:white;
+    color: white;
     background-color: #160202;
+    text-align: center; /* Alinea el título y la pregunta */
+    min-height: 75vh; /* Asegura que cubra toda la altura de la ventana */
 }
+
+.acerca-flex {
+    display: flex; /* Activa Flexbox solo para este contenido */
+    flex-direction: column; /* Aplica columna para móviles */
+    align-items: center; /* Centra los elementos */
+    gap: 20px; /* Espacio entre párrafos */
+    margin: 20px 0; /* Espaciado adicional alrededor del contenido */
+}
+
+@media (min-width: 768px) {
+    .acerca-flex {
+        flex-direction: row; /* Cambia a fila para pantallas grandes */
+        justify-content: space-between; /* Separa los elementos */
+        align-items: flex-start; /* Alinea el texto e imagen arriba */
+    }
+}
+
+h2 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.comentarios {
+    font-size: 22px; /* Ajusta el tamaño del texto */
+    font-style: italic; /* Diferencia visualmente este apartado */
+    color: #E63946; /* Color destacado */
+    margin-top: 20px; /* Espacio adicional encima */
+}
+
 .portada {
-    max-width: 100%; /* No excede el tamaño del contenedor */
-    height: 500px; /* Mantiene la proporción */
-    display: block; /* Evita espacios en línea alrededor de la imagen */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
+
+
 span{
     color:#E63946;
     font-weight: bold;
 }
+
+
+
 
 /* Footer */
 footer {
